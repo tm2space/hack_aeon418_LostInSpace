@@ -1,0 +1,18 @@
+{
+  "description": "Direct overpass: ground track through AOI center, ~0 deg off-nadir",
+  "tle1": "1 99991U 26001A   26113.50000000  .00000000  00000-0  00000-0 0     7",
+  "tle2": "2 99991  97.4000 296.7000 0001000  90.0000 230.0000 15.21920000    08",
+  "aoi_polygon": [
+    [44.55,  9.37],
+    [44.55, 10.63],
+    [45.45, 10.63],
+    [45.45,  9.37],
+    [44.55,  9.37]
+  ],
+  "pass_start": "2026-04-23T17:24:00Z",
+  "pass_end":   "2026-04-23T17:36:00Z",
+  "alpha": 0.25,
+  "beta":  0.10,
+  "delta_h_budget": 0.200,
+  "sc_params_overrides": {}
+}

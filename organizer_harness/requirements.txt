@@ -1,0 +1,17 @@
+# basilisk_harness runtime dependencies
+#
+# The harness itself runs on the organizer's machine. Teams submitting code
+# get the *intersection* of their requirements.txt and the allowlist the
+# harness imports. The harness pre-installs numpy, scipy, sgp4 for teams;
+# anything below is for the organizer-side runtime.
+
+numpy>=1.23
+scipy>=1.10
+sgp4>=2.23           # SGP4 propagator (used by harness + typically by teams)
+shapely>=2.0         # polygon coverage accumulation
+
+# --- Basilisk is intentionally NOT pip-installable.
+# Install from https://hanspeterschaub.info/basilisk following their build
+# instructions (CMake + SWIG + Python bindings). The harness falls back to
+# mock_sim if Basilisk is not importable — mock mode is for local dev only
+# and MUST NOT be used to compute leaderboard scores.

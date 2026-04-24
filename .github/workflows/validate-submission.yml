@@ -1,0 +1,56 @@
+name: Validate submission
+
+# Structurally validate .py files added under submissions/ in a PR.
+# This only checks that the file imports and exports plan_imaging()
+# with the right signature; it does NOT score the submission.
+# Actual scoring happens on the organizers' machine with Basilisk.
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/**/*.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r teams_kit/requirements.txt
+
+      - name: Find changed submissions
+        id: changed
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'submissions/**/*.py' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Structural validation
+        if: steps.changed.outputs.files != ''
+        run: |
+          set -e
+          cd teams_kit
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            echo "::group::Validating $f"
+            python test_my_submission.py "../$f" --case case1 --quiet || \
+              (echo "::error file=$f::submission failed structural validation"; exit 1)
+            echo "::endgroup::"
+          done <<< "${{ steps.changed.outputs.files }}"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Submission validation complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "This run only checks that your submission imports cleanly and returns a structurally valid schedule. It does **not** score your submission — actual scoring happens on the organizers' machine with Basilisk." >> $GITHUB_STEP_SUMMARY
