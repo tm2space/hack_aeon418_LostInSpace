@@ -62,3 +62,5 @@ Why it matters for this track: small fine-tuned variants can plausibly run on a 
 Built by TakeMe2Space, 2026. TerraMind © IBM Research, ESA, and Jülich Supercomputing Centre. TakeMe2Space and OrbitLab are trademarks of TakeMe2Space.
 
 Licensed under [MIT](./LICENSE).
+
+Have a question or a b ug to report? Let us know here: https://forms.gle/o7vEkvp8LeeXEPQn9
