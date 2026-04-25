@@ -17,7 +17,7 @@ You will ultimately deliver:
 
 - **A code folder** under `submissions/<team_name>/` (notebook, scripts, model card — your call)
 - **A short writeup** (`README.md` inside your team folder, ≤ 2 pages) covering what you built, why, and how
-- **A 5-minute presentation** with a live demo or recorded clip
+- **A 2-minute presentation** with a live demo or recorded clip
 
 ## Repository layout
 

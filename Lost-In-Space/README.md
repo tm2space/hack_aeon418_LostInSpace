@@ -59,6 +59,7 @@ Presentations are judged first; top 3 submissions are then verified against the 
 
 - [Problem statement (markdown)](./docs/PROBLEM_STATEMENT.md)
 - [Problem statement (PDF)](./docs/PROBLEM_STATEMENT.pdf)
+- [Judging rubric](./docs/JUDGING.md)
 - [Teams' testing kit](./teams_kit/)
 - [Submission Google Form](https://drive.google.com/file/d/1noVG_VyGAGF2qNE6kYSnzWupmZ9SvK9D/view?usp=sharing)
 - [Organizer harness](./organizer_harness/) — the Basilisk-backed grader (optional read)

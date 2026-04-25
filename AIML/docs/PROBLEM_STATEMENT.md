@@ -6,7 +6,7 @@
 |---|---|
 | **Track**       | AI/ML in Space — TerraMind for Orbital Compute |
 | **Format**      | Open-ended. You pick the use case. |
-| **Deliverable** | A code folder + a short writeup + a 5-minute presentation |
+| **Deliverable** | A code folder + a short writeup + a 2-minute presentation |
 | **Judging**     | Presentation + writeup + code, scored against the rubric in [`JUDGING.md`](./JUDGING.md) |
 
 ---
@@ -69,15 +69,15 @@ A `README.md` inside your team folder, ≤ 2 pages. It should answer:
 
 ### 4.3 The presentation
 
-5 minutes. Slides + a live demo (or recorded clip if your model is too slow to demo live). Judges want to see:
+2 minutes. Slides + a live demo (or recorded clip if your model is too slow to demo live). Judges want to see:
 
 - The customer problem in one slide
 - The model in one slide
-- A working demo
+- A working demo (clip is fine)
 - Numbers
 - Honest limits
 
-We'll publish a slot schedule the day before. Don't run over — judges cut you off at 5:00.
+We'll publish a slot schedule the day before. Don't run over — judges cut you off at 2:00.
 
 ## 5. Example Directions
 

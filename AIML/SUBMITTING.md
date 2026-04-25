@@ -4,7 +4,7 @@ You deliver **three things** to the organizers:
 
 1. **A code folder** under `submissions/<your_team_name>/`
 2. **A short writeup** as `README.md` inside that folder (≤ 2 pages)
-3. **A 5-minute presentation** (slides + live or recorded demo)
+3. **A 2-minute presentation** (slides + live or recorded demo)
 
 See [Section 4 of the problem statement](./docs/PROBLEM_STATEMENT.md#4-what-you-submit) for the full deliverable spec, and [`docs/JUDGING.md`](./docs/JUDGING.md) for what scores well.
 
@@ -60,17 +60,17 @@ Run through this before you submit:
 - [ ] Slides are ready (PDF preferred — Google Slides links break)
 - [ ] Your demo runs end-to-end on a fresh machine *(test this on a teammate's laptop, not yours)*
 
-## The 5-minute presentation
+## The 2-minute presentation
 
-Detailed structure is in [`docs/JUDGING.md`](./docs/JUDGING.md#the-5-minute-presentation). Headline:
+Detailed structure is in [`docs/JUDGING.md`](./docs/JUDGING.md#the-2-minute-presentation). Headline:
 
 1. **The customer** (1 slide)
 2. **The model** (1 slide)
-3. **The demo** (the bulk)
+3. **The evidence** (the bulk — recorded clip or quick live demo)
 4. **The numbers** (1 slide)
 5. **Limits + what's next** (1 slide)
 
-You have 300 seconds. Judges cut at 5:00. Skip the table-of-contents slide.
+You have 120 seconds. Judges cut at 2:00. Skip the table-of-contents slide.
 
 ## After submission
 

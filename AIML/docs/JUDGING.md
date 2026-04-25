@@ -8,9 +8,9 @@ Judges score each submission independently across five criteria, then the scores
 
 | # | Criterion | Weight | What we're looking for |
 |---|---|---|---|
-| 1 | **Fit to TM2Space's orbital-compute story** | 25% | Would this workload plausibly run on MOI / a Jetson-class payload? Does the *output* (not the imagery) actually matter to a paying customer? "Downlink the answer, not the data." |
-| 2 | **Quantitative result vs. a baseline** | 30% | Not just "it runs." Did you measure something? Did you beat a reasonable baseline (a smaller model, a non-foundation-model approach, a published number)? Be honest about how much of the gain is from TerraMind specifically. |
-| 3 | **Live demo or runnable app** | 20% | Can a non-technical judge see it working in under a minute? Streamlit, Gradio, a notebook with a "Run All" cell — anything that doesn't require the judge to install your environment counts. |
+| 1 | **Fit to TM2Space's orbital-compute story** | 25% | Would this workload plausibly run on MOI / a Jetson-class payload? Does the *output* (not the imagery) actually matter to a paying customer? "Downlink the answer, not the data." One real customer, named, in one sentence. |
+| 2 | **Quantitative result vs. a baseline** | 30% | Not just "it runs." One slide showing metric + baseline + delta. Be honest about how much of the gain is from TerraMind specifically (vs. the dataset, vs. a smaller model). |
+| 3 | **Evidence the system works** | 20% | Recorded clip, notebook output, or one input → output screenshot. Live demo is welcome if you can pull it off in 30 s; recorded is equally acceptable in this slot. The judge needs to *see* it work, not take your word for it. |
 | 4 | **Edge-inference feasibility** | 15% | You don't have to *prove* it runs on a Jetson — but you should have *thought* about it. Model size in MB, inference latency on a known card, RAM ceiling, an honest "would this fit" paragraph. Hand-waving "could be quantized" is not enough; back-of-envelope numbers are. |
 | 5 | **Code quality & documentation** | 10% | Reproducible? README clear? Sensible structure? A judge cloning your folder should be able to run inference in under 10 minutes. |
 
@@ -34,19 +34,21 @@ Read these. They are real failure modes from past hackathons.
 - **Hand-waved feasibility.** "This would obviously run on a satellite" — no, you have to do the math. Model size in MB, FLOPs per inference, expected latency. If you didn't measure it, say "we didn't measure it" and move on; that's better than guessing.
 - **Unreproducible code.** Pinned dependencies + a README + a single command to run inference. If the judge has to debug your pip install, you've already lost criterion #5.
 
-## The 5-minute presentation
+## The 2-minute presentation
 
-You get 5 minutes. We cut at 5:00. Suggested structure:
+You get 2 minutes. We cut at 2:00. Suggested structure:
 
 | Time | Slide / segment | What goes here |
 |---|---|---|
-| 0:00–0:45 | **The customer** | One slide, one customer, one sentence. *"A crop insurance underwriter in Maharashtra needs to verify a claim within 48 hours."* |
-| 0:45–1:30 | **The data + model** | What you used, what you fine-tuned, why. One architecture sketch. |
-| 1:30–3:30 | **The demo** | Live or recorded. The judge should see input → output. |
-| 3:30–4:15 | **The numbers** | One slide. Your metric, the baseline, the delta. Inference latency. Model size. |
-| 4:15–5:00 | **Limits + what's next** | What doesn't work yet. What you'd build with another week. |
+| 0:00–0:20 | **The customer** | One slide, one customer, one sentence. *"A crop insurance underwriter in Maharashtra needs to verify a claim within 48 hours."* |
+| 0:20–0:50 | **The data + model** | What you used, what you fine-tuned, why. One architecture sketch. |
+| 0:50–1:30 | **The evidence** | Recorded clip, screenshot, or quick live demo. Input → output, visibly. |
+| 1:30–1:50 | **The numbers** | One slide. Your metric, the baseline, the delta. Inference latency. Model size. |
+| 1:50–2:00 | **Limits + what's next** | What doesn't work yet. What you'd build with another week. |
 
 Skip the table-of-contents slide. Skip "thanks for listening" — just stop talking and take questions.
+
+Two minutes is short. Practice it on a stopwatch. Cut anything that isn't customer, evidence, numbers, or limits.
 
 ## Verification
 
